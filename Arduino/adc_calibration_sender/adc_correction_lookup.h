@@ -1,3 +1,6 @@
+/*
+Note: This is my result, you can replace this file with you new generated LUT later.
+*/
 #ifndef ADC_CORRECTION_LOOKUP_H
 #define ADC_CORRECTION_LOOKUP_H
 
