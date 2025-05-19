@@ -40,9 +40,10 @@ Since the DAC is lower resolution, we don’t cover every possible ADC value dir
 
 1. **Sweep DAC values from 0–255**
    - Each step generates a known analog voltage:
-     \[
-     V_{DAC} = \frac{\text{DAC}}{255} \times 3.3\,\text{V}
-     \]
+
+     ```math
+      V_{DAC} = \frac{\text{DAC}}{255} \times 3.3\,\text{V} 
+     ```
 
 2. **Take 100 ADC samples per DAC value**
    - Gives an average ADC reading for each known DAC voltage
@@ -215,6 +216,8 @@ As shown above, the corrected ADC output tracks the ideal line significantly bet
 - You can optionally clamp early LUT entries to zero to avoid overcorrection at low ADC values.
 - The generated LUT is ready for real-time compensation using:
   ```cpp
+  #include "adc_correction_lookup.h"
+
   uint16_t corrected = adc_correction_lut[analogRead(33)];
   ```
 
