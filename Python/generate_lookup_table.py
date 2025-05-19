@@ -59,7 +59,7 @@ header_lines = [
     "#ifndef ADC_CORRECTION_LOOKUP_H",
     "#define ADC_CORRECTION_LOOKUP_H",
     "",
-    "#output <stdint.h>",
+    "#include <stdint.h>",
     "",
     "const uint16_t adc_correction_lut[4096] = {"
 ]
